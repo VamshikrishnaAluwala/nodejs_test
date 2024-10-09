@@ -1,0 +1,51 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: node-service-template
+  title: Node.js Service Template
+  description: Creates a simple Node.js service with a basic setup.
+  tags:
+    - nodejs
+    - service
+    - scaffolder
+spec:
+  owner: your-team
+  type: service
+
+  parameters:
+    - title: Service Info
+      properties:
+        name:
+          title: Service Name
+          description: Enter the name of the Node.js service
+          type: string
+          ui:autofocus: true
+        description:
+          title: Description
+          description: Enter a short description of the service
+          type: string
+        owner:
+          title: Owner
+          description: Team or individual owning the service
+          type: string
+        repositoryUrl:
+          title: Repository URL
+          description: Git repository URL to host the service
+          type: string
+
+  steps:
+    - id: fetchBase
+      name: Fetch Base
+      action: fetch:template
+      input:
+        url: ./skeleton        # Refers to the skeleton directory
+        targetPath: .
+
+    - id: execute
+      name: Execute Template
+      action: templating:handlebars
+      input:
+        values:
+          name: '{{ parameters.name }}'
+          description: '{{ parameters.description }}'
+          owner: '{{ parameters.owner
