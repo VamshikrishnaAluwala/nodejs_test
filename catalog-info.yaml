@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample_project           # Name of your project
+  description: This is a sample project integrated with Backstage.
+  owner: team-name               # Replace with your team or username
+  tags:
+    - javascript
+    - node
+spec:
+  type: service                  # Component type (e.g., service, library)
+  lifecycle: production          # Lifecycle stage (production, development, etc.)
+  owner: team-name               # Team or group responsible for the project
+  links:
+    - url: https://github.com/your-username/sample_project
+      title: GitHub Repository    # Link to your GitHub repository
