@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Renovx
+  name: service_doc
   annotations:
     backstage.io/techdocs-ref: value
 spec:
