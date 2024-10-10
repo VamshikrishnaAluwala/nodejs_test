@@ -6,4 +6,5 @@ metadata:
     backstage.io/techdocs-ref: value
 spec:
   type: website
+  lifecycle: production
   owner: artist-relations-team
