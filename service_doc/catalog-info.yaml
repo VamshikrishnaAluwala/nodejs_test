@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: service_doc
   annotations:
-    backstage.io/techdocs-ref: value
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: production
